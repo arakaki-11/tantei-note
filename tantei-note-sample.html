@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「残業が増えた夫」3日間の調査で判明した職場の同僚との関係｜探偵ノート ― 実録・調査事例集</title>
+<meta name="description" content="結婚11年目、夫の残業と休日出勤が急に増えた30代女性からの浮気調査のご依頼。調査プラン・費用・3日間の調査記録・その後の慰謝料請求と夫婦関係の再構築までを実録で紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2b2a33;
+    --ink-soft: #5c5a66;
+    --navy: #1f2a44;
+    --navy-deep: #151d31;
+    --wine: #7a2e3a;
+    --wine-soft: #f6eced;
+    --gold: #b08d57;
+    --paper: #faf8f4;
+    --line: #e4dfd6;
+    --card: #ffffff;
+    --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.95;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--wine); }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    background: var(--navy-deep);
+    color: #fff;
+    border-bottom: 3px solid var(--gold);
+  }
+  .site-header .inner {
+    max-width: 1080px; margin: 0 auto; padding: 14px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .logo { text-decoration: none; color: #fff; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .logo .main { font-family: var(--serif); font-size: 22px; font-weight: 700; letter-spacing: .08em; }
+  .logo .sub { font-size: 12px; color: #c9c3b6; letter-spacing: .1em; }
+  .gnav { display: flex; gap: 22px; font-size: 13px; }
+  .gnav a { color: #e8e3d8; text-decoration: none; }
+  .gnav a:hover { color: var(--gold); }
+  @media (max-width: 720px) { .gnav { display: none; } }
+
+  /* ---------- Layout ---------- */
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 280px; gap: 48px; }
+  @media (max-width: 960px) { .wrap { grid-template-columns: 1fr; gap: 0; } }
+  main { min-width: 0; }
+
+  .breadcrumb { max-width: 1080px; margin: 0 auto; padding: 16px 20px 0; font-size: 12px; color: var(--ink-soft); }
+  .breadcrumb a { color: var(--ink-soft); text-decoration: none; }
+  .breadcrumb span { margin: 0 6px; }
+
+  /* ---------- Article head ---------- */
+  .article-head { padding: 28px 0 8px; }
+  .case-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+  .case-no {
+    font-family: var(--serif); font-size: 13px; color: var(--gold);
+    border: 1px solid var(--gold); padding: 2px 10px; letter-spacing: .12em;
+  }
+  .tag { font-size: 12px; background: var(--wine); color: #fff; padding: 3px 10px; border-radius: 2px; }
+  .tag.outline { background: transparent; color: var(--ink-soft); border: 1px solid var(--line); }
+  h1 {
+    font-family: var(--serif); font-size: 30px; line-height: 1.55; margin: 0 0 14px;
+    color: var(--navy); letter-spacing: .02em;
+  }
+  @media (max-width: 600px) { h1 { font-size: 23px; } }
+  .lead { color: var(--ink-soft); margin: 0 0 18px; }
+  .date { font-size: 12px; color: var(--ink-soft); }
+  .privacy-note {
+    font-size: 12px; color: var(--ink-soft); background: #f0ede7; padding: 10px 14px;
+    border-left: 3px solid var(--gold); margin: 18px 0 0;
+  }
+
+  /* ---------- Summary card ---------- */
+  .summary {
+    background: var(--navy); color: #fff; margin: 28px 0 8px; padding: 26px 28px;
+    position: relative;
+  }
+  .summary::before {
+    content: "CASE SUMMARY"; position: absolute; top: -11px; left: 24px;
+    background: var(--gold); color: var(--navy-deep); font-size: 11px; font-weight: 700;
+    letter-spacing: .18em; padding: 2px 10px;
+  }
+  .summary dl { display: grid; grid-template-columns: 110px 1fr; margin: 0; gap: 10px 16px; font-size: 14.5px; }
+  .summary dt { color: #c9c3b6; }
+  .summary dd { margin: 0; }
+  .summary .result { color: #f3d9a4; font-weight: 700; }
+  @media (max-width: 600px) { .summary dl { grid-template-columns: 1fr; gap: 0; } .summary dd { margin-bottom: 10px; } }
+
+  /* ---------- TOC ---------- */
+  .toc { background: var(--card); border: 1px solid var(--line); padding: 20px 26px; margin: 32px 0; }
+  .toc p { margin: 0 0 8px; font-family: var(--serif); font-weight: 700; color: var(--navy); }
+  .toc ol { margin: 0; padding-left: 1.4em; font-size: 14.5px; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--wine); text-decoration: underline; }
+
+  /* ---------- Sections ---------- */
+  section.chapter { margin: 56px 0; }
+  .chapter-label {
+    font-family: var(--serif); font-size: 13px; color: var(--gold); letter-spacing: .2em; margin-bottom: 4px;
+  }
+  h2 {
+    font-family: var(--serif); font-size: 24px; color: var(--navy); margin: 0 0 22px;
+    padding-bottom: 12px; border-bottom: 2px solid var(--navy); position: relative; line-height: 1.5;
+  }
+  h2::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 72px; height: 2px; background: var(--wine); }
+  h3 {
+    font-size: 18px; color: var(--navy); margin: 34px 0 12px; padding-left: 12px;
+    border-left: 4px solid var(--wine); line-height: 1.5;
+  }
+  p { margin: 0 0 1.2em; }
+  strong.mark { background: linear-gradient(transparent 62%, #f1dfc0 62%); font-weight: 700; }
+
+  /* profile */
+  .profile { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; }
+  @media (max-width: 600px) { .profile { grid-template-columns: 1fr; } }
+  .profile .box { background: var(--card); border: 1px solid var(--line); padding: 16px 20px; }
+  .profile .who { font-family: var(--serif); font-weight: 700; color: var(--navy); margin-bottom: 6px; font-size: 15px; }
+  .profile ul { margin: 0; padding-left: 1.2em; font-size: 14px; line-height: 1.85; }
+
+  /* voice */
+  .voice { background: var(--card); border: 1px solid var(--line); padding: 22px 24px 18px; margin: 24px 0; position: relative; }
+  .voice::before {
+    content: "“"; font-family: var(--serif); font-size: 64px; color: var(--wine); opacity: .25;
+    position: absolute; top: -12px; left: 12px; line-height: 1;
+  }
+  .voice .speaker { font-size: 12px; color: var(--ink-soft); margin-bottom: 8px; display: block; }
+  .voice p { margin: 0 0 .7em; font-size: 15px; }
+
+  /* checklist */
+  .signs { list-style: none; padding: 0; margin: 0 0 24px; }
+  .signs li { padding: 10px 14px 10px 40px; border-bottom: 1px dashed var(--line); position: relative; font-size: 15px; }
+  .signs li::before {
+    content: "✓"; position: absolute; left: 12px; top: 10px; color: #fff; background: var(--wine);
+    width: 20px; height: 20px; font-size: 12px; line-height: 20px; text-align: center; border-radius: 50%;
+  }
+
+  /* point box */
+  .point { background: var(--wine-soft); border: 1px solid #e6cfd2; padding: 18px 22px; margin: 24px 0; }
+  .point .ttl { font-weight: 700; color: var(--wine); font-size: 14px; letter-spacing: .05em; margin-bottom: 6px; }
+  .point p:last-child, .point ul:last-child { margin-bottom: 0; }
+  .point ul { padding-left: 1.2em; margin: 0; font-size: 14.5px; }
+
+  /* plan cards */
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  @media (max-width: 600px) { .plans { grid-template-columns: 1fr; } }
+  .plan { background: var(--card); border: 1px solid var(--line); padding: 20px; position: relative; }
+  .plan.chosen { border: 2px solid var(--wine); }
+  .plan .badge { position: absolute; top: -12px; right: 14px; background: var(--wine); color: #fff; font-size: 11px; padding: 2px 10px; font-weight: 700; }
+  .plan h4 { margin: 0 0 6px; font-size: 16px; color: var(--navy); }
+  .plan .price { font-family: var(--serif); font-size: 24px; color: var(--wine); font-weight: 700; margin: 4px 0 8px; }
+  .plan .price small { font-size: 13px; color: var(--ink-soft); font-family: var(--sans); font-weight: 400; }
+  .plan ul { margin: 0; padding-left: 1.2em; font-size: 13.5px; line-height: 1.8; }
+
+  /* table */
+  .table-wrap { overflow-x: auto; margin: 16px 0 8px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 14.5px; min-width: 480px; }
+  th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+  thead th { background: var(--navy); color: #fff; font-weight: 500; }
+  td.num { text-align: right; white-space: nowrap; }
+  tr.total td { background: #f3efe7; font-weight: 700; }
+  tr.total td.num { color: var(--wine); font-size: 16px; }
+  .note { font-size: 12.5px; color: var(--ink-soft); }
+
+  /* timeline */
+  .day { margin: 30px 0; }
+  .day-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+  .day-num { background: var(--navy); color: #fff; font-family: var(--serif); font-size: 13px; padding: 4px 12px; letter-spacing: .1em; }
+  .day-title { font-weight: 700; color: var(--navy); }
+  .timeline { list-style: none; margin: 0; padding: 0 0 0 4px; border-left: 2px solid var(--line); margin-left: 8px; }
+  .timeline li { position: relative; padding: 8px 0 8px 22px; font-size: 14.5px; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -7px; top: 16px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--paper); border: 2px solid var(--navy);
+  }
+  .timeline li.key::before { background: var(--wine); border-color: var(--wine); }
+  .timeline .t { font-family: var(--serif); font-weight: 700; color: var(--navy); display: inline-block; min-width: 56px; }
+  .timeline li.key { background: var(--wine-soft); }
+  .timeline li.key .t { color: var(--wine); }
+  .day-result { font-size: 14px; background: var(--card); border: 1px solid var(--line); padding: 10px 14px; margin-top: 10px; }
+  .day-result b { color: var(--wine); }
+
+  /* photo placeholder */
+  .evidence { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 18px 0 6px; }
+  @media (max-width: 600px) { .evidence { grid-template-columns: 1fr 1fr; } }
+  .evidence figure { margin: 0; }
+  .evidence .ph {
+    aspect-ratio: 4/3; background: repeating-linear-gradient(45deg, #d9d5cc, #d9d5cc 8px, #d2cdc3 8px, #d2cdc3 16px);
+    display: flex; align-items: center; justify-content: center; color: #6e6a62; font-size: 11px; text-align: center; padding: 6px;
+    filter: blur(0); position: relative;
+  }
+  .evidence .ph::after { content: "MOSAIC"; position: absolute; bottom: 6px; right: 8px; font-size: 9px; letter-spacing: .15em; color: #8d887e; }
+  .evidence figcaption { font-size: 11.5px; color: var(--ink-soft); margin-top: 4px; line-height: 1.6; }
+
+  /* result stats */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+  @media (max-width: 600px) { .stats { grid-template-columns: 1fr; } }
+  .stat { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--wine); padding: 16px; text-align: center; }
+  .stat .num { font-family: var(--serif); font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+  .stat .num small { font-size: 14px; }
+  .stat .lbl { font-size: 12.5px; color: var(--ink-soft); }
+
+  /* steps (after) */
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 20px 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 22px 56px; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%;
+    background: var(--navy); color: #fff; font-family: var(--serif); font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+  .steps li::after { content: ""; position: absolute; left: 18px; top: 42px; bottom: 4px; width: 2px; background: var(--line); }
+  .steps li:last-child::after { display: none; }
+  .steps .st { font-weight: 700; color: var(--navy); display: block; margin-bottom: 2px; }
+  .steps .when { font-size: 12px; color: var(--gold); font-weight: 700; margin-left: 6px; }
+  .steps p { margin: 0; font-size: 14.5px; }
+
+  /* now */
+  .now { background: var(--card); border: 1px solid var(--line); padding: 24px 26px; margin: 24px 0; }
+  .now .label { display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 11px; font-weight: 700; letter-spacing: .15em; padding: 2px 10px; margin-bottom: 10px; }
+
+  /* detective comment */
+  .detective { display: grid; grid-template-columns: 84px 1fr; gap: 18px; background: var(--navy); color: #fff; padding: 26px; margin: 40px 0; }
+  .detective .avatar {
+    width: 84px; height: 84px; border-radius: 50%; background: #2f3c5c; border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 13px; color: var(--gold); text-align: center; line-height: 1.4;
+  }
+  .detective .name { font-family: var(--serif); font-weight: 700; margin-bottom: 4px; }
+  .detective .name small { font-family: var(--sans); font-weight: 400; color: #c9c3b6; font-size: 12px; margin-left: 8px; }
+  .detective p { font-size: 14.5px; margin: 0 0 .8em; color: #ece8df; }
+  .detective p:last-child { margin: 0; }
+  @media (max-width: 600px) { .detective { grid-template-columns: 1fr; } }
+
+  /* CTA */
+  .cta { border: 2px solid var(--wine); background: var(--card); padding: 28px; text-align: center; margin: 40px 0; }
+  .cta h3 { border: none; padding: 0; margin: 0 0 8px; font-family: var(--serif); font-size: 20px; text-align: center; }
+  .cta p { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+  .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 26px; text-decoration: none; font-weight: 700; font-size: 15px; }
+  .btn.primary { background: var(--wine); color: #fff; }
+  .btn.secondary { background: var(--navy); color: #fff; }
+  .cta .small { font-size: 12px; margin: 12px 0 0; }
+
+  /* related */
+  .related { margin: 48px 0 64px; }
+  .related h2 { font-size: 20px; }
+  .related-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 720px) { .related-list { grid-template-columns: 1fr; } }
+  .related-list a { display: block; background: var(--card); border: 1px solid var(--line); padding: 16px; text-decoration: none; color: var(--ink); font-size: 14px; line-height: 1.7; }
+  .related-list a:hover { border-color: var(--wine); }
+  .related-list .no { font-family: var(--serif); color: var(--gold); font-size: 12px; display: block; margin-bottom: 4px; }
+
+  /* sidebar */
+  aside { padding-top: 28px; }
+  .side-box { background: var(--card); border: 1px solid var(--line); padding: 20px; margin-bottom: 20px; }
+  .side-box h4 { margin: 0 0 12px; font-family: var(--serif); color: var(--navy); font-size: 15px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+  .side-box ul { list-style: none; padding: 0; margin: 0; font-size: 13.5px; }
+  .side-box li { padding: 6px 0; border-bottom: 1px dashed var(--line); display: flex; justify-content: space-between; }
+  .side-box li:last-child { border-bottom: none; }
+  .side-box li a { color: var(--ink); text-decoration: none; }
+  .side-box li span { color: var(--ink-soft); font-size: 12px; }
+  .side-cta { background: var(--navy); color: #fff; padding: 22px 20px; text-align: center; position: sticky; top: 20px; }
+  .side-cta p { font-size: 13px; margin: 0 0 12px; color: #e8e3d8; }
+  .side-cta .tel { font-family: var(--serif); font-size: 22px; color: var(--gold); font-weight: 700; display: block; margin-bottom: 4px; }
+  .side-cta .btn { width: 100%; margin-top: 8px; }
+
+  /* footer */
+  footer { background: var(--navy-deep); color: #a9a397; font-size: 12px; padding: 30px 20px; text-align: center; line-height: 1.9; }
+  footer .logo-f { font-family: var(--serif); color: #fff; font-size: 16px; letter-spacing: .08em; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="#" class="logo">
+      <span class="main">探偵ノート</span>
+      <span class="sub">実録・調査事例集</span>
+    </a>
+    <nav class="gnav">
+      <a href="#">浮気・不倫調査</a>
+      <a href="#">素行調査</a>
+      <a href="#">人探し</a>
+      <a href="#">費用の目安</a>
+      <a href="#">無料相談</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="#">ホーム</a><span>›</span><a href="#">浮気・不倫調査の事例</a><span>›</span>Case No.012
+</div>
+
+<div class="wrap">
+<main>
+  <article>
+    <div class="article-head">
+      <div class="case-meta">
+        <span class="case-no">CASE No.012</span>
+        <span class="tag">浮気・不倫調査</span>
+        <span class="tag outline">夫の浮気</span>
+        <span class="tag outline">職場不倫</span>
+        <span class="tag outline">慰謝料請求</span>
+        <span class="tag outline">再構築</span>
+      </div>
+      <h1>「残業が増えた夫」――3日間の調査で判明した、職場の同僚女性との関係</h1>
+      <p class="lead">結婚11年目。半年ほど前から急に増えた残業と休日出勤。「疑いたくないけれど、もう自分では抱えきれない」。そうおっしゃって来所された30代女性のご依頼を、相談から1年後の現在まで記録しました。</p>
+      <p class="date">公開日：2026年11月18日 ／ 担当：調査部 主任調査員</p>
+      <p class="privacy-note">※ ご依頼者様の同意を得て掲載しています。プライバシー保護のため、地名・職業・日時などの一部を変更しています。</p>
+    </div>
+
+    <div class="summary">
+      <dl>
+        <dt>ご依頼者</dt><dd>30代後半・女性（パート勤務）／東京都内在住</dd>
+        <dt>調査対象</dt><dd>夫（40代前半・メーカー営業職）</dd>
+        <dt>調査内容</dt><dd>浮気調査（行動調査・相手方の身元調査）</dd>
+        <dt>調査期間</dt><dd>3日間（金曜日×3回／計18時間）</dd>
+        <dt>調査費用</dt><dd>297,000円（税込・経費込）</dd>
+        <dt>調査結果</dt><dd class="result">不貞行為の証拠を2回取得／相手女性の氏名・住所・勤務先を特定</dd>
+        <dt>その後</dt><dd>相手女性から慰謝料120万円で示談成立。夫婦は関係の再構築を選択</dd>
+      </dl>
+    </div>
+
+    <nav class="toc">
+      <p>目次</p>
+      <ol>
+        <li><a href="#consult">ご相談内容 ― 依頼者の状況</a></li>
+        <li><a href="#proposal">ご提案した調査プランと費用</a></li>
+        <li><a href="#investigation">実際の調査記録</a></li>
+        <li><a href="#result">調査結果</a></li>
+        <li><a href="#after">その後 ― 依頼者が選んだ道と現在</a></li>
+      </ol>
+    </nav>
+
+    <!-- ========== 1 ========== -->
+    <section class="chapter" id="consult">
+      <div class="chapter-label">CHAPTER 01</div>
+      <h2>ご相談内容 ― 依頼者の状況</h2>
+
+      <div class="profile">
+        <div class="box">
+          <div class="who">ご依頼者　Aさん（38歳）</div>
+          <ul>
+            <li>パート勤務（週4日・事務）</li>
+            <li>結婚11年目、子ども2人（小学3年・年長）</li>
+            <li>夫の実家とは良好な関係</li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="who">調査対象　夫・Bさん（42歳）</div>
+          <ul>
+            <li>中堅メーカーの法人営業（課長職）</li>
+            <li>平日は電車通勤、帰宅は通常20時前後</li>
+            <li>社内での人望は厚く、家庭でも子煩悩</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Aさんが最初にお電話をくださったのは、平日の午前10時過ぎ。子どもを送り出したあとの時間でした。お電話口では言葉を選びながら、「確証はないんです。ただ、ここ半年で夫が少しずつ変わってしまった気がして」とお話しされていました。</p>
+
+      <h3>Aさんが気づいていた「変化」</h3>
+      <p>後日、事務所での面談（約90分）で、具体的にお話を伺いました。Aさんが挙げられた変化は次のとおりです。</p>
+      <ul class="signs">
+        <li>半年ほど前から<strong class="mark">金曜日だけ帰宅が深夜1時〜2時</strong>になる。理由はいつも「部の飲み会」「取引先の接待」</li>
+        <li>月に1〜2回、土曜日の「休日出勤」が入るようになった</li>
+        <li>スマートフォンのロック番号が変わり、入浴時も脱衣所に持ち込むようになった</li>
+        <li>LINEの通知がオフに設定されている</li>
+        <li>帰宅後、着替えずにまずシャワーを浴びるようになった</li>
+        <li>これまで無頓着だった服装や体型を気にし始め、ジムに通い出した</li>
+        <li>クレジットカードの明細に、心当たりのない都内のビストロ（2名分程度の金額）が数回</li>
+      </ul>
+
+      <div class="voice">
+        <span class="speaker">― 面談時のAさんのお話（要約）</span>
+        <p>「一度だけ、さりげなく『最近、金曜遅いね』と言ったんです。そうしたら『仕事なんだから仕方ないだろ』と強い口調で返されて。それ以来、怖くて何も聞けなくなりました。」</p>
+        <p>「子どもたちのためにも、離婚したいわけではないんです。でも、このまま見ないふりをして暮らすのはもう限界で。本当のことを知って、それから考えたいと思いました。」</p>
+      </div>
+
+      <h3>面談で整理したご依頼の目的</h3>
+      <p>浮気調査では、「何のために事実を知りたいのか」によって調査の組み立て方が変わります。面談ではAさんと一緒に、目的を次のように整理しました。</p>
+      <ol>
+        <li><strong>事実を確認したい</strong>（浮気が本当にあるのか、ないのか）</li>
+        <li>もし浮気があった場合、<strong>相手が誰なのかを知りたい</strong></li>
+        <li>離婚するかどうかは未定。ただし<strong>どちらを選んでも困らない証拠</strong>は押さえておきたい</li>
+      </ol>
+
+      <div class="point">
+        <div class="ttl">探偵の見立て</div>
+        <p>「金曜日に限って深夜帰宅」「心当たりのない2名分の飲食」「シャワー」――この3つが揃うケースでは、特定の曜日に決まった相手と会っている可能性が高いと考えられます。行動パターンに規則性があるため、<strong>調査日を絞り込むことで費用を抑えられる</strong>と判断しました。</p>
+      </div>
+    </section>
+
+    <!-- ========== 2 ========== -->
+    <section class="chapter" id="proposal">
+      <div class="chapter-label">CHAPTER 02</div>
+      <h2>ご提案した調査プランと費用</h2>
+
+      <p>面談の内容をもとに、2つのプランをご提示しました。Aさんのご予算は「できれば30万円前後まで」とのことでした。</p>
+
+      <div class="plans">
+        <div class="plan chosen">
+          <span class="badge">今回のご依頼</span>
+          <h4>プランA：曜日特定型</h4>
+          <div class="price">約30万円 <small>（税込・経費込）</small></div>
+          <ul>
+            <li>金曜日に限定し、最大3回調査</li>
+            <li>1回あたり6時間（夕方〜深夜）</li>
+            <li>調査員2名＋車両1台</li>
+            <li>1回目で証拠が揃えば、残りは中止・返金</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h4>プランB：1か月パック</h4>
+          <div class="price">約55万円 <small>（税込・経費込）</small></div>
+          <ul>
+            <li>1か月の間で計40時間</li>
+            <li>平日夜・土曜日も含めて調査</li>
+            <li>調査員2〜3名体制</li>
+            <li>行動パターンが読めない場合に向く</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Aさんのお話から金曜日の可能性がきわめて高いと判断し、<strong>プランA（曜日特定型）</strong>をおすすめしました。土曜日の「休日出勤」も気になる点でしたが、まずは金曜日で結果を見て、必要があれば追加を検討するという流れにしました。</p>
+
+      <h3>お見積もりの内訳（プランA）</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>項目</th><th>内容</th><th>金額（税込）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>調査員費用</td><td>7,500円 × 2名 × 6時間 × 3日</td><td class="num">270,000円</td></tr>
+            <tr><td>車両費</td><td>5,000円 × 3日</td><td class="num">15,000円</td></tr>
+            <tr><td>実費（交通費・駐車場代など）</td><td>実際にかかった金額（今回の実績）</td><td class="num">12,000円</td></tr>
+            <tr><td>調査報告書作成費</td><td>写真・動画データ、報告書2部</td><td class="num">0円（込み）</td></tr>
+            <tr><td>着手金・キャンセル料</td><td>着手金なし。調査日の前日までのキャンセルは無料</td><td class="num">0円</td></tr>
+            <tr class="total"><td colspan="2">合計</td><td class="num">297,000円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">※ 延長が発生した場合は1名1時間あたり7,500円。延長は必ず依頼者様に電話またはメッセージで確認してから行います。<br>※ 料金体系は事務所によって異なります。上記は当事務所の一例です。</p>
+
+      <div class="point">
+        <div class="ttl">契約前にお伝えしたこと</div>
+        <ul>
+          <li>調査期間中は、夫に問い詰める・スマホを見るなど<strong>「疑っているそぶり」を見せない</strong>こと</li>
+          <li>夫の予定が変わりそうな情報（飲み会の連絡、出張など）は、わかった時点で担当者へ連絡すること</li>
+          <li>結果が「浮気なし」の場合も、調査報告書はお渡しすること</li>
+        </ul>
+      </div>
+      <p>契約は探偵業法に基づく重要事項説明を行ったうえで、面談当日に締結されました。</p>
+    </section>
+
+    <!-- ========== 3 ========== -->
+    <section class="chapter" id="investigation">
+      <div class="chapter-label">CHAPTER 03</div>
+      <h2>実際の調査記録</h2>
+
+      <p>調査は、ベテラン調査員（男性）と女性調査員の2名体制で行いました。男女ペアにすることで、飲食店やホテル街でも周囲に溶け込みやすく、対象者に気づかれにくくなります。以下は、実際の調査報告書から抜粋・再構成したものです。</p>
+
+      <!-- Day 1 -->
+      <div class="day">
+        <div class="day-head">
+          <span class="day-num">DAY 1</span>
+          <span class="day-title">1週目・金曜日　17:30〜23:30</span>
+        </div>
+        <ul class="timeline">
+          <li><span class="t">17:30</span>対象者の勤務先ビル（港区）の正面出入口・通用口の2か所に調査員を配置</li>
+          <li><span class="t">19:12</span>対象者が同僚とみられる男女5名と退社。徒歩で新橋方面へ</li>
+          <li><span class="t">19:25</span>全員で居酒屋に入店。女性調査員が客として入店し、近くの席を確保</li>
+          <li class="key"><span class="t">21:50</span>対象者が隣席の女性（30代前半・以下「C」）の肩に手を置き、耳元で話す様子を確認</li>
+          <li><span class="t">22:40</span>解散。対象者とCの2名のみ、他のメンバーと別れて駅方面へ</li>
+          <li class="key"><span class="t">22:52</span>駅の改札前で手を握り合う様子を撮影。Cは都営線、対象者はJRで帰宅</li>
+          <li><span class="t">23:41</span>対象者の自宅最寄り駅で降車を確認。調査終了</li>
+        </ul>
+        <div class="day-result"><b>この日の成果：</b>親密な関係が疑われる女性Cを確認。ただし、不貞行為（肉体関係）の証拠にはあたらないため、調査を続行。</div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day">
+        <div class="day-head">
+          <span class="day-num">DAY 2</span>
+          <span class="day-title">2週目・金曜日　17:30〜24:00（30分延長）</span>
+        </div>
+        <ul class="timeline">
+          <li><span class="t">18:45</span>対象者が1人で退社。地下鉄で門前仲町駅へ</li>
+          <li><span class="t">19:20</span>駅前でCと合流。腕を組んで歩き出す</li>
+          <li><span class="t">19:35</span>2名でビストロに入店（クレジットカード明細にあった店舗と同一）</li>
+          <li><span class="t">21:05</span>退店。コンビニで飲み物と菓子類を購入</li>
+          <li class="key"><span class="t">21:20</span>2名で江東区内のマンションに入る。オートロックをCが解錠したことから、Cの自宅と推定</li>
+          <li><span class="t">23:30</span>Aさんに状況を報告。夫から「今日は終電かも」とLINEが来ていることを確認し、30分延長を合意</li>
+          <li class="key"><span class="t">00:52</span>対象者のみマンションから退出。滞在時間は約3時間32分。タクシーで帰宅</li>
+        </ul>
+        <div class="day-result"><b>この日の成果：</b>Cの自宅への出入りと長時間の滞在を撮影。不貞行為を強く推認させる証拠を1回分取得。</div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day">
+        <div class="day-head">
+          <span class="day-num">DAY 3</span>
+          <span class="day-title">3週目・金曜日　17:30〜23:30</span>
+        </div>
+        <ul class="timeline">
+          <li><span class="t">18:30</span>別班の調査員がCの勤務先を確認。対象者と同じ会社の別部署（総務系）と判明</li>
+          <li><span class="t">19:05</span>対象者とCが時間差で退社し、品川駅で合流</li>
+          <li><span class="t">19:30</span>駅近くの焼肉店で食事</li>
+          <li class="key"><span class="t">20:28</span>2名で五反田のレジャーホテルに入る様子を、入口の看板が分かる構図で撮影</li>
+          <li class="key"><span class="t">23:03</span>2名で退室。滞在時間は約2時間35分。そのまま駅で別れる</li>
+          <li><span class="t">23:20</span>Cの帰宅を確認し、調査終了</li>
+        </ul>
+        <div class="day-result"><b>この日の成果：</b>ラブホテルへの出入りを撮影（不貞行為の証拠・2回目）。あわせてCの氏名・勤務先を特定。</div>
+      </div>
+
+      <div class="evidence">
+        <figure><div class="ph">改札前で手を<br>握り合う様子</div><figcaption>DAY1 22:52</figcaption></figure>
+        <figure><div class="ph">C宅マンション<br>エントランス入館</div><figcaption>DAY2 21:20</figcaption></figure>
+        <figure><div class="ph">C宅マンション<br>退出</div><figcaption>DAY2 00:52</figcaption></figure>
+        <figure><div class="ph">ホテル入口<br>入室時</div><figcaption>DAY3 20:28</figcaption></figure>
+        <figure><div class="ph">ホテル入口<br>退室時</div><figcaption>DAY3 23:03</figcaption></figure>
+        <figure><div class="ph">報告書 表紙</div><figcaption>報告書（全38ページ）</figcaption></figure>
+      </div>
+      <p class="note">※ 掲載用の画像は加工したイメージです。実際の報告書には、日時入りの鮮明な写真を掲載しています。</p>
+
+      <div class="point">
+        <div class="ttl">なぜ「2回分」の証拠が必要なのか</div>
+        <p>ラブホテルや相手の自宅に1回入っただけでは、裁判などで「たまたま」「相談に乗っていただけ」と言い逃れされるおそれがあります。<strong>時期の異なる2回以上の出入りを記録</strong>しておくと、継続的な不貞関係として認められやすくなります。今回はプランAの3日間で、2回分の証拠を押さえることができました。</p>
+      </div>
+    </section>
+
+    <!-- ========== 4 ========== -->
+    <section class="chapter" id="result">
+      <div class="chapter-label">CHAPTER 04</div>
+      <h2>調査結果</h2>
+
+      <div class="stats">
+        <div class="stat"><div class="num">2<small>回</small></div><div class="lbl">不貞行為の証拠<br>（相手宅・ホテル）</div></div>
+        <div class="stat"><div class="num">146<small>枚</small></div><div class="lbl">撮影写真<br>＋ 動画12本</div></div>
+        <div class="stat"><div class="num">18.5<small>時間</small></div><div class="lbl">総調査時間<br>（延長30分含む）</div></div>
+      </div>
+
+      <h3>判明した事実</h3>
+      <ul>
+        <li>夫・Bさんは、<strong>同じ会社の別部署に勤める女性C（31歳・独身）</strong>と交際していた</li>
+        <li>毎週金曜日の「飲み会」「接待」の多くは、Cとの密会だった</li>
+        <li>Cの自宅マンションでの約3時間半の滞在、ラブホテルでの約2時間半の滞在を記録</li>
+        <li>Cの氏名・住所・勤務先を特定（慰謝料請求の書面を送るために必要な情報）</li>
+      </ul>
+
+      <h3>報告の場で</h3>
+      <p>調査報告書は、DAY3の6日後に事務所でお渡ししました。写真をお見せする前に、「ご気分が悪くなったら、いつでも止めてくださいね」とお伝えしています。</p>
+      <div class="voice">
+        <span class="speaker">― 報告時のAさん</span>
+        <p>「やっぱり、という気持ちと、信じたくない気持ちが半々です。でも、もう自分の勘違いかもしれないと悩まなくていい。そこは少しだけ楽になりました。」</p>
+      </div>
+      <p>実費の清算後、お支払いの総額はお見積もりどおりの<strong>297,000円</strong>でした（延長30分の15,000円は、実費が見込みより少なかった分と相殺）。</p>
+    </section>
+
+    <!-- ========== 5 ========== -->
+    <section class="chapter" id="after">
+      <div class="chapter-label">CHAPTER 05</div>
+      <h2>その後 ― 依頼者が選んだ道と現在</h2>
+
+      <p>報告書を受け取ったあと、Aさんがどのように動かれたのかを時系列でご紹介します。</p>
+
+      <ol class="steps">
+        <li>
+          <span class="st">弁護士への相談<span class="when">報告から1週間後</span></span>
+          <p>当事務所と提携している、男女問題に強い弁護士をご紹介しました。報告書をもとに「離婚する場合」「再構築する場合」それぞれの選択肢と、慰謝料の相場について説明を受けられました。</p>
+        </li>
+        <li>
+          <span class="st">夫との話し合い<span class="when">報告から2週間後</span></span>
+          <p>子どもたちを実家に預けた土曜日の夜に、Aさんから切り出しました。夫ははじめ「ただの同僚」と否定しましたが、報告書の写真を見せると認め、謝罪したそうです。</p>
+        </li>
+        <li>
+          <span class="st">相手女性への慰謝料請求<span class="when">報告から1か月後</span></span>
+          <p>弁護士を通じて、Cに内容証明郵便で慰謝料200万円を請求。Cも代理人を立て、交渉の結果<strong>慰謝料120万円・今後の接触禁止（違反時の違約金100万円）</strong>で示談が成立しました。</p>
+        </li>
+        <li>
+          <span class="st">夫婦間での誓約書の作成<span class="when">報告から2か月後</span></span>
+          <p>夫婦関係の再構築を選んだAさんは、夫と誓約書を交わしました。内容は「Cと業務以外で接触しない」「再び不貞があった場合は離婚に応じ、慰謝料300万円を支払う」「スマホの位置情報を共有する」など。</p>
+        </li>
+        <li>
+          <span class="st">相手女性の異動<span class="when">報告から4か月後</span></span>
+          <p>Cが会社の別拠点へ異動となり、夫と職場で顔を合わせることはなくなりました（会社側に不倫の事実は伝えていません）。</p>
+        </li>
+      </ol>
+      <p class="note">※ 弁護士費用（着手金・成功報酬）は約40万円で、慰謝料の中から支払われたそうです。</p>
+
+      <div class="now">
+        <span class="label">NOW ― 1年後の現在</span>
+        <p>ご依頼から約1年が経った先日、Aさんからお便りをいただきました。</p>
+        <p>夫婦で月に1回、夫婦カウンセリングに通っていること。夫は金曜日も20時までには帰宅し、週末は子どもたちのサッカーの送り迎えを担当していること。「まだ完全に許せたわけではないけれど、前よりも夫婦で話す時間は増えた」と綴られていました。</p>
+        <div class="voice" style="margin-bottom:0">
+          <span class="speaker">― Aさんからのメッセージ</span>
+          <p>「あのとき一人で問い詰めていたら、きっとはぐらかされて、もっと苦しんでいたと思います。証拠があったから、私が主導権を持って“これからどうするか”を決められました。同じように悩んでいる方には、まず相談だけでもしてみてほしいです。」</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- detective comment -->
+    <div class="detective">
+      <div class="avatar">担当<br>調査員</div>
+      <div>
+        <div class="name">担当調査員より<small>調査歴14年／浮気調査 担当件数600件以上</small></div>
+        <p>今回のように、ご依頼者様が変化に気づいた時点で<strong>行動の規則性（曜日・時間帯）</strong>をメモしてくださっていると、調査日を絞り込めるため、費用を大きく抑えられます。</p>
+        <p>また、Aさんが調査期間中に一切問い詰めず、普段どおりに過ごしてくださったことも成功の大きな要因でした。一度警戒されると、対象者は会う頻度を減らしたり場所を変えたりするため、調査が長引いて費用がかさんでしまいます。</p>
+        <p>浮気調査のゴールは「離婚」だけではありません。事実を知ったうえで、ご自身が納得できる道を選ぶこと。そのための材料をそろえるのが、私たちの仕事だと考えています。</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h3>「もしかして」と感じたら、まずはご相談ください</h3>
+      <p>ご相談・お見積もりは無料です。ご相談内容が外部に漏れることはありません。<br>Aさんのように、面談で状況を整理するだけでも気持ちが楽になる方が多くいらっしゃいます。</p>
+      <div class="btns">
+        <a href="#" class="btn primary">無料で相談する（24時間受付）</a>
+        <a href="#" class="btn secondary">LINEで相談する</a>
+      </div>
+      <p class="small">女性相談員をご指定いただけます／匿名でのご相談も可能です</p>
+    </div>
+
+    <!-- related -->
+    <section class="related">
+      <h2>あわせて読みたい事例</h2>
+      <div class="related-list">
+        <a href="#"><span class="no">CASE No.009</span>「出張が増えた妻」――週末の“研修”の正体と、離婚・親権の行方</a>
+        <a href="#"><span class="no">CASE No.011</span>マッチングアプリで知り合った相手との浮気。調査2日で判明した二重生活</a>
+        <a href="#"><span class="no">CASE No.007</span>調査の結果「浮気なし」。それでも依頼してよかったと語る理由</a>
+      </div>
+    </section>
+  </article>
+</main>
+
+<aside>
+  <div class="side-box">
+    <h4>調査の種類から探す</h4>
+    <ul>
+      <li><a href="#">浮気・不倫調査</a><span>48件</span></li>
+      <li><a href="#">素行調査</a><span>12件</span></li>
+      <li><a href="#">結婚前調査</a><span>7件</span></li>
+      <li><a href="#">人探し・所在調査</a><span>9件</span></li>
+      <li><a href="#">ストーカー・嫌がらせ</a><span>6件</span></li>
+    </ul>
+  </div>
+  <div class="side-box">
+    <h4>その後の結末から探す</h4>
+    <ul>
+      <li><a href="#">関係を再構築した</a><span>21件</span></li>
+      <li><a href="#">離婚した</a><span>17件</span></li>
+      <li><a href="#">慰謝料を請求した</a><span>24件</span></li>
+      <li><a href="#">浮気はなかった</a><span>8件</span></li>
+    </ul>
+  </div>
+  <div class="side-box">
+    <h4>費用で探す</h4>
+    <ul>
+      <li><a href="#">〜20万円</a><span>11件</span></li>
+      <li><a href="#">20〜40万円</a><span>23件</span></li>
+      <li><a href="#">40〜70万円</a><span>14件</span></li>
+      <li><a href="#">70万円以上</a><span>6件</span></li>
+    </ul>
+  </div>
+  <div class="side-cta">
+    <p>ご相談・お見積もりは無料</p>
+    <span class="tel">0120-000-000</span>
+    <p style="font-size:11px;margin:0">24時間・365日受付</p>
+    <a href="#" class="btn primary">メールで相談する</a>
+  </div>
+</aside>
+</div>
+
+<footer>
+  <div class="logo-f">探偵ノート ― 実録・調査事例集</div>
+  運営：○○探偵事務所／探偵業届出番号：東京都公安委員会 第○○○○○○○○号<br>
+  掲載している事例は、すべてご依頼者様の同意を得たうえで、個人が特定されないよう内容を一部変更しています。<br>
+  &copy; 2026 Tantei Note. All rights reserved.
+</footer>
+
+</body>
+</html>
