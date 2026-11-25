@@ -196,30 +196,16 @@
   .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
   @media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 32px; } }
   .about-text p { font-size: 15px; margin: 0 0 1.2em; }
-  .policy { list-style: none; padding: 0; margin: 20px 0 0; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .policy { list-style: none; padding: 0; margin: 0; border-top: 1px dashed var(--line); }
   .policy li { position: relative; padding: 12px 0 12px 34px; border-bottom: 1px dashed var(--line); font-size: 14.5px; }
   .policy li::before { content: "✓"; position: absolute; left: 4px; top: 13px; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 11px; line-height: 20px; text-align: center; }
-  .writer { background: var(--navy); color: #fff; padding: 30px; }
-  .writer .head { display: flex; gap: 18px; align-items: center; margin-bottom: 16px; }
-  .writer .avatar { width: 72px; height: 72px; flex-shrink: 0; border-radius: 50%; background: #2f3c5c; border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: var(--serif); color: var(--gold); font-size: 12px; text-align: center; line-height: 1.4; }
-  .writer .role { font-size: 12px; color: #c9c3b6; }
-  .writer .name { font-family: var(--serif); font-size: 18px; font-weight: 700; }
-  .writer p { font-size: 14px; color: #e3ded3; margin: 0 0 16px; }
-  .writer dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 13px; margin: 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.15); }
-  .writer dt { color: var(--gold); }
-  .writer dd { margin: 0; color: #e3ded3; }
-  .about-side { display: grid; gap: 16px; }
-  .partners { background: var(--card); border: 1px solid var(--line); padding: 26px 30px; }
-  .partners h3 { margin: 0 0 8px; font-family: var(--serif); color: var(--navy); font-size: 17px; }
-  .partners p { font-size: 14px; color: var(--ink-soft); margin: 0 0 12px; }
-  .partners ul { list-style: none; padding: 0; margin: 0 0 12px; font-size: 14px; }
-  .partners li { padding: 8px 0; border-bottom: 1px dashed var(--line); }
-  .partners li strong { color: var(--navy); margin-right: 8px; }
-  .partners .disclose { font-size: 12px; color: var(--ink-soft); margin: 0; }
-  .svc-cta { background: var(--wine-soft); border: 2px solid var(--wine); padding: 26px 30px; }
+  .svc-cta { background: var(--wine-soft); border: 2px solid var(--wine); padding: 26px 30px; margin-top: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  @media (max-width: 860px) { .svc-cta { flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 32px; } }
   .svc-cta h3 { margin: 0 0 8px; font-family: var(--serif); color: var(--wine); font-size: 17px; }
-  .svc-cta p { font-size: 14px; margin: 0 0 16px; }
-  .btn-svc { display: inline-block; background: var(--wine); color: #fff; text-decoration: none; padding: 12px 28px; font-weight: 700; font-size: 14.5px; letter-spacing: .05em; }
+  .svc-cta p { font-size: 14px; margin: 0; }
+  .svc-cta .disclose { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
+  .btn-svc { display: inline-block; flex-shrink: 0; background: var(--wine); color: #fff; text-decoration: none; padding: 12px 28px; font-weight: 700; font-size: 14.5px; letter-spacing: .05em; }
   .btn-svc:hover { opacity: .9; }
 
   /* ---------- FAQ ---------- */
@@ -573,51 +559,24 @@
       <div class="about-text">
         <p>探偵に調査を依頼する方の多くは、「本当に頼んでいいのか」「頼んだらどうなるのか」がわからないまま、一人で悩み続けています。</p>
         <p>「探偵ノート」は、株式会社○○が運営する探偵の事例メディアです。当社と提携する複数の探偵社から、実際に受けたご依頼の記録を寄稿していただき、編集部が内容を確認・編集して掲載しています。ご相談の段階から調査の内容、費用、調査後に依頼者が選んだ道までをできるだけありのままにお伝えし、同じように悩む方がご自身の状況を整理する手がかりになればと考えています。</p>
-        <ul class="policy">
-          <li>掲載しているのは、提携探偵社が実際に受けたご依頼の記録です</li>
-          <li>寄稿いただくのは、探偵業法に基づき公安委員会へ届出を行っている探偵社に限り、編集部が届出を確認しています</li>
-          <li>掲載にあたっては、探偵社を通じてご依頼者様の同意をいただいています</li>
-          <li>個人や探偵社が特定されないよう、地名・職業・日時などの一部を変更し、探偵社名は匿名で表示しています</li>
-          <li>費用や調査内容は各探偵社の実例です。料金体系は探偵社によって異なります</li>
-          <li>記事中の写真・画像はすべてイメージです</li>
-        </ul>
       </div>
+      <ul class="policy">
+        <li>掲載しているのは、提携探偵社が実際に受けたご依頼の記録です</li>
+        <li>寄稿いただくのは、探偵業法に基づき公安委員会へ届出を行っている探偵社に限り、編集部が届出を確認しています</li>
+        <li>掲載にあたっては、探偵社を通じてご依頼者様の同意をいただいています</li>
+        <li>個人や探偵社が特定されないよう、地名・職業・日時などの一部を変更し、探偵社名は匿名で表示しています</li>
+        <li>費用や調査内容は各探偵社の実例です。料金体系は探偵社によって異なります</li>
+        <li>記事中の写真・画像はすべてイメージです</li>
+      </ul>
+    </div>
 
-      <div class="about-side">
-        <div class="writer">
-          <div class="head">
-            <div class="avatar">運営<br>編集</div>
-            <div>
-              <div class="role">運営・編集</div>
-              <div class="name">探偵ノート編集部</div>
-            </div>
-          </div>
-          <p>提携探偵社から寄稿された事例をもとに、専門用語の補足、個人を特定できる情報の確認、構成の編集を行っています。</p>
-          <dl>
-            <dt>運営会社</dt><dd>株式会社○○</dd>
-            <dt>所在地</dt><dd>東京都○○区○○ 0-0-0</dd>
-            <dt>事業内容</dt><dd>Webメディアの運営、探偵紹介サービス「探偵の窓口」の運営</dd>
-            <dt>設立</dt><dd>20XX年</dd>
-          </dl>
-        </div>
-
-        <div class="partners">
-          <h3>事例を寄稿している探偵社</h3>
-          <p>各事例は、提携探偵社の調査員が自ら担当した案件を振り返って執筆しています。記事ごとに「提携探偵社A」のように寄稿元を表示しています。</p>
-          <ul>
-            <li><strong>提携探偵社A</strong>浮気・不倫調査、素行調査</li>
-            <li><strong>提携探偵社B</strong>結婚前調査、所在調査</li>
-            <li><strong>提携探偵社C</strong>ストーカー・嫌がらせ対策</li>
-          </ul>
-          <p class="disclose">※ 寄稿している探偵社は、当社が運営する探偵紹介サービス「探偵の窓口」の提携先です。</p>
-        </div>
-
-        <div class="svc-cta">
-          <h3>探偵選びに迷ったら</h3>
-          <p>「どの探偵社に頼めばいいかわからない」という方は、当社の探偵紹介サービス「探偵の窓口」をご利用ください。ご相談内容をうかがい、状況に合った探偵社をご紹介します。</p>
-          <a href="https://tantei-mado.jp/" class="btn-svc">探偵の窓口で相談する →</a>
-        </div>
+    <div class="svc-cta">
+      <div>
+        <h3>探偵選びに迷ったら</h3>
+        <p>「どの探偵社に頼めばいいかわからない」という方は、当社の探偵紹介サービス「探偵の窓口」をご利用ください。ご相談内容をうかがい、状況に合った探偵社をご紹介します。</p>
+        <p class="disclose">※ 事例を寄稿している探偵社は、「探偵の窓口」の提携先です。</p>
       </div>
+      <a href="https://tantei-mado.jp/" class="btn-svc">探偵の窓口で相談する →</a>
     </div>
   </div>
 </section>
@@ -638,20 +597,24 @@
         <div class="ans"><p>はい。すべて提携探偵社が実際に受けたご依頼をもとにしています。ただし、ご依頼者様や関係者、探偵社が特定されないよう、地名・職業・年齢・日時などの一部を変更しています。</p></div>
       </details>
       <details>
-        <summary>調査中に相手に気づかれることはありませんか？</summary>
-        <div class="ans"><p>提携探偵社では、調査員が複数名で交代しながら尾行・張り込みを行い、気づかれるリスクを最小限に抑えています。ただし、調査期間中にご依頼者様が問い詰めるなど「疑っているそぶり」を見せると、相手が警戒して調査が難しくなることがあります。</p></div>
+        <summary>事例はどのように作られていますか？</summary>
+        <div class="ans"><p>提携探偵社の調査員が、自ら担当した案件を振り返って執筆し、探偵ノート編集部が専門用語の補足や個人を特定できる情報の確認を行って掲載しています。調査の結果や費用など、事実にかかわる部分は変更していません。</p></div>
       </details>
       <details>
-        <summary>調査の結果、浮気がなかった場合も費用はかかりますか？</summary>
-        <div class="ans"><p>はい。一般的に、調査は結果にかかわらず、実際に行った時間に対して費用が発生します。掲載している事例でも、浮気がなかった場合はその日の行動を記録した調査報告書が渡されています。料金体系は探偵社によって異なるため、依頼前に確認しておきましょう。実例は「浮気はなかった」の事例をご覧ください。</p></div>
+        <summary>記事に出てくる調査費用は、どの探偵社でも同じですか？</summary>
+        <div class="ans"><p>いいえ。掲載している費用は、その事例を寄稿した探偵社の実例です。料金体系や調査の進め方は探偵社によって異なるため、目安としてご覧ください。</p></div>
       </details>
       <details>
-        <summary>集めた証拠は、離婚や慰謝料請求に使えますか？</summary>
-        <div class="ans"><p>ラブホテルや相手の自宅への出入りを、日時がわかる形で複数回記録したものは、不貞行為の証拠として認められやすくなります。具体的な法的手続きについては、弁護士にご相談ください。</p></div>
+        <summary>自分と似たケースの事例を探すにはどうすればいいですか？</summary>
+        <div class="ans"><p><a href="#finder">「事例を探す」</a>から、調査の種類、結末（再構築・離婚・慰謝料請求など）、費用の3つの切り口で事例を絞り込めます。</p></div>
       </details>
       <details>
-        <summary>自分の事例を掲載されることはありますか？</summary>
-        <div class="ans"><p>ご依頼者様の同意なく掲載することはありません。掲載にあたっては、提携探偵社からご依頼者様にご説明し、内容を事前にご確認いただいたうえで、ご了承いただいた範囲でのみ掲載しています。</p></div>
+        <summary>「浮気はなかった」事例も掲載しているのはなぜですか？</summary>
+        <div class="ans"><p>調査の結果、疑いが晴れるケースも少なくありません。調査が必ずしも「浮気の証拠を探すため」だけのものではないことを知っていただくため、こうした事例も掲載しています。</p></div>
+      </details>
+      <details>
+        <summary>探偵ノートと「探偵の窓口」はどういう関係ですか？</summary>
+        <div class="ans"><p>どちらも株式会社○○が運営しています。探偵ノートに事例を寄稿している探偵社は、<a href="https://tantei-mado.jp/">「探偵の窓口」</a>の提携先です。</p></div>
       </details>
       <details>
         <summary>探偵ノートに調査を依頼できますか？</summary>
@@ -695,7 +658,7 @@
         <h4>サイト情報</h4>
         <ul>
           <li><a href="#about">このサイトについて</a></li>
-          <li><a href="#">運営会社</a></li>
+          <li><a href="#">運営者情報</a></li>
           <li><a href="https://tantei-mado.jp/">探偵の窓口（探偵社の紹介）</a></li>
           <li><a href="#">お問い合わせ</a></li>
           <li><a href="#">プライバシーポリシー</a></li>
