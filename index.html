@@ -69,6 +69,8 @@
   .im-gym     { background: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 2px, transparent 2px 40px), linear-gradient(170deg, #5b4a52 0%, #2c2630 100%); }
   .im-house   { background: radial-gradient(circle at 30% 40%, #ffd99a 0 5%, transparent 15%), radial-gradient(circle at 62% 42%, #ffd99a 0 5%, transparent 15%), linear-gradient(180deg, #2f3550 0%, #151a2a 100%); }
   .im-letter  { background: linear-gradient(10deg, #efe6d6 0 45%, transparent 45%), linear-gradient(170deg, #8a7a66 0%, #4c4239 100%); }
+  .im-case012 { background: url("images/case-012.jpg") center / cover no-repeat; }
+  .im-case012::after { display: none; }
   .im-tea     { background: radial-gradient(circle at 45% 55%, #c58b5b 0 9%, #f2e9db 9% 13%, transparent 13%), linear-gradient(150deg, #e9dfcf, #a99883); }
 
   /* ---------- Hero ---------- */
@@ -86,7 +88,7 @@
   .hero-eyebrow { font-family: var(--serif); color: var(--gold); letter-spacing: .3em; font-size: 13px; margin: 0 0 18px; }
   .hero h1 { font-family: var(--serif); font-size: 46px; line-height: 1.45; margin: 0 0 24px; letter-spacing: .06em; font-weight: 700; }
   .hero h1 em { font-style: normal; color: #f3d9a4; }
-  @media (max-width: 600px) { .hero h1 { font-size: 32px; } }
+  @media (max-width: 600px) { .hero h1 { font-size: clamp(22px, calc((100vw - 48px) / 11.6), 28px); letter-spacing: .04em; } }
   .hero-lead { color: #d9d4c9; font-size: 15.5px; margin: 0 0 32px; max-width: 30em; }
   .hero-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
   .hero-links a { color: #fff; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
@@ -257,8 +259,8 @@
   <div class="container">
     <div>
       <p class="hero-eyebrow">REAL CASE FILES</p>
-      <h1>依頼の数だけ、<br><em>結末</em>がある。</h1>
-      <p class="hero-lead">夫の帰りが遅くなった。妻の休日の予定が増えた。小さな違和感から始まった依頼の、相談から調査、そしてその後までを、探偵が一件ずつ記録しています。</p>
+      <h1>疑惑から真実へ。<br>探偵調査の<em>実録</em>を公開。</h1>
+      <p class="hero-lead">夫の帰りが遅くなった。妻の休日の予定が増えた。小さな違和感から始まった依頼の、相談から調査、そしてその後までを、探偵が実際に行った調査記録を元に事例集として紹介します。</p>
       <div class="hero-links">
         <a href="#latest">新着の事例を読む</a>
         <a href="#outcomes">結末から読む</a>
@@ -267,7 +269,7 @@
 
     <a href="tantei-note-sample.html" class="hero-case">
       <div class="thumb">
-        <div class="img im-office"></div>
+        <div class="img im-case012"></div>
         <span class="img-note">※画像はイメージです</span>
       </div>
       <div class="body">
